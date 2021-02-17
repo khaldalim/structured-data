@@ -1,0 +1,22 @@
+<script type="application/ld+json">
+{ 
+    "@context": "https://schema.org", 
+    "@type": "Article",
+    "headline": "<?php echo mb_strimwidth($blog_data_description, 0, 100, "..."); ?>",
+    "image": "<?php echo $blog_data_image['url'] ?>",
+    "author": "<?php echo  get_the_author() ; ?>", 
+    "publisher": {
+        "@type": "Organization",
+        "name": "Inout",
+        "logo": {
+        "@type": "ImageObject",
+        "url": "<?php echo $header_logo['url'] ?>"
+    }
+},
+"url": "<?php echo $current_url ?>",
+"datePublished": "<?php the_date('Y-m-d'); ?>",
+"dateCreated": "<?php the_date('Y-m-d'); ?>"
+
+
+}
+</script>
